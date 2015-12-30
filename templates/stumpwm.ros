@@ -1,0 +1,15 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -L ccl-bin -Q -- $0 "$@"
+|#
+(ql:quickload :stumpwm :silent t)
+
+(defpackage :ros.script.stumpwm.3660496739
+  (:use :cl))
+(in-package :ros.script.stumpwm.3660496739)
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (stumpwm:stumpwm))
+

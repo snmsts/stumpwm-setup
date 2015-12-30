@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=StumpWM
+Comment=This session logs you into StumpWM
+Exec=/usr/local/bin/stumpwm
+Type=Application
