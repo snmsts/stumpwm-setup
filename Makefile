@@ -1,5 +1,4 @@
 templates/stumpwm: templates/stumpwm.ros
-	ros install ccl-bin
 	ros build templates/stumpwm.ros
 
 install: templates/stumpwm
