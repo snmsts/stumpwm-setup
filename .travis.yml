@@ -1,0 +1,22 @@
+language: c
+sudo: false
+
+env:
+  global:
+   - PATH=~/.roswell/bin:$PATH
+   - ROSWELL_BRANCH=master
+   - ROSWELL_INSTALL_DIR=$HOME/.roswell
+   - LISP=sbcl-bin/1.4.4
+
+os:
+  - linux
+
+cache:
+  directories:
+    - $HOME/.roswell
+
+install:
+  - curl -L https://raw.githubusercontent.com/roswell/roswell/$ROSWELL_BRANCH/scripts/install-for-ci.sh | sh
+
+script:
+  - make
